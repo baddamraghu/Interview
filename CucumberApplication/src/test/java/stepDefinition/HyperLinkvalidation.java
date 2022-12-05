@@ -38,15 +38,15 @@ public class HyperLinkvalidation {
 		  {
 			try { 
 			  //Open the wiki home page
-		        driver.get(url);
-		        List<WebElement> links =  driver.findElements(By.tagName("a"));
+		        textContent.driver.get(url);
+		        List<WebElement> links =  textContent.driver.findElements(By.tagName("a"));
 		        
 		        totalLinks=totalLinks+links.size();
 		        //Store all the links of that page
                 Set<WebElement> uniqueLinks = new HashSet<WebElement>(links);
                 //Counting the total unique Links
                 totalUniqueLinks=totalUniqueLinks+links.size();
-	           // System.out.println("links in page1 " + links.size());
+	           // System.out.println("links in page1 " + uniqueLinks.size());
 
 	              for (WebElement u : uniqueLinks ) {
 	          
@@ -95,7 +95,7 @@ public class HyperLinkvalidation {
 		   
 	        
 	        
-	      driver.quit();
+	      textContent.driver.quit();
 	    	
 	   }
 }
